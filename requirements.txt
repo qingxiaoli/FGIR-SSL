@@ -1,0 +1,13 @@
+
+---
+
+### 2.2 requirements.txt
+
+```text
+torch>=1.10
+torchvision>=0.11
+timm>=0.5
+PyYAML>=5.4
+numpy
+Pillow
+pytest
