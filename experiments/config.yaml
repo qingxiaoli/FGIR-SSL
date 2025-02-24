@@ -1,0 +1,26 @@
+# Training and evaluation configuration file
+
+data:
+    data_dir: "./data/FGIR_dataset"
+    num_workers: 4
+  
+  training:
+    batch_size: 64
+    epochs: 100
+    learning_rate: 1e-4
+    sigma: 16
+    Tmax: 800
+    margin: 1.0
+    temperature: 0.1
+    lambda1: 0.7
+    lambda2: 0.3
+    device: "cuda"  # or "cpu"
+  
+  model:
+    backbone: "vit"  # Options: "vit" or "resnet"
+    pretrained: True
+  
+  evaluation:
+    batch_size: 64
+    metrics: ["Recall@1", "Recall@2", "Recall@4", "Recall@8"]
+  
